@@ -305,8 +305,6 @@ func (s *YDB) ConvertRows(events []*model.Event) ([]types.Value, int, error) {
 					if hashUsed {
 						hashValue[field] = value
 					}
-				} else {
-					log.Debug(fmt.Sprintf("column for message key: %s (value: %v) not found, skipped", field, value))
 				}
 
 				continue
